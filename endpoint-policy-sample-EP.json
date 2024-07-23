@@ -4,6 +4,7 @@
         "/snapshot/summary",
         "/snapshot/detail"
     ],
+    "apply-json-to-csv-converter": true,
     "email-notification-template":{
         "from":"admin@cloudmonk.me",
         "to":[ "cphillipson@vmware.com" ],
