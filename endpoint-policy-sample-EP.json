@@ -1,10 +1,19 @@
 {
     "description":"Sample endpoint policy that will fetch data from available /snapshot endpoints.",
-    "endpoints":[
-        "/snapshot/summary",
-        "/snapshot/detail"
+    "endpoint-requests":[
+        {
+            "endpoint" : "/snapshot/summary"
+        },
+        {
+            "endpoint" : "/snapshot/detail",
+            "json-path-expression": "$.service-instances",
+            "apply-json-to-csv-converter": true
+        },
+        {
+            "endpoint": "/snapshot/detail",
+            "json-path-expression": "$.application-relationships"
+        }
     ],
-    "apply-json-to-csv-converter": true,
     "email-notification-template":{
         "from":"admin@cloudmonk.me",
         "to":[ "cphillipson@vmware.com" ],
